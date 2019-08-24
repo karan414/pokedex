@@ -17,6 +17,7 @@ class PokemonList extends Component {
     fetch('https://pokeapi.co/api/v2/pokemon/?limit=892', {mode: "cors"})
     .then(res => res.json())
     .then(response=>{
+      console.log(response);
       this.setState({
         species : response.results,
         loading : true,
